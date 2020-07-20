@@ -1,0 +1,23 @@
+{
+  "name": "the-simplest-color-checker",
+  "version": "1.0.0",
+  "description": "check if color is dark or light and do something",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amans199/the-simplest-color-checker.git"
+  },
+  "keywords": [
+    "colors",
+    "color-check"
+  ],
+  "author": "Ahmed Mansour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amans199/the-simplest-color-checker/issues"
+  },
+  "homepage": "https://github.com/amans199/the-simplest-color-checker#readme"
+}
