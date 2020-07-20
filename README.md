@@ -54,7 +54,7 @@ Use it as below
       checkColorOf:"#eee",
       ifDarkDo:alert('this color is dark),
       ifLightDo:alert('this color is light')
-  })
+  });
 ```
 <br />
 <br />
