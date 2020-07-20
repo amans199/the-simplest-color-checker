@@ -8,14 +8,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/amans199/the-simplest-color-checker">
-    <img src="images/logo.png" alt="Logo" width="80" >
-  </a>
 
-  <h3 align="center">The simplest Breadcrumb you will ever use</h3>
+  <h3 align="center">Check if the color is light or Dark in a second</h3>
 
   <p align="center">
-    Your website is just a one line away from having an awesome breadcrumb that actually WORKS
     <br />
     <a href="https://github.com/amans199/the-simplest-color-checker"><strong>Explore the docs »</strong></a>
     <br />
