@@ -49,7 +49,7 @@ import checkColor from 'the-simplest-color-checker'
 <br />
 Use it as below
 <br />
-```sh
+```
   checkColor({
       checkColorOf:"#eee",
       ifDarkDo:alert('this color is dark),
