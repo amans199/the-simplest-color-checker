@@ -124,7 +124,15 @@ export default App;
 #### Using the-simplest-color-checker in Vue app: 
 
 ```
-
+import { checkColor } from "the-simplest-color-checker";
+export default {
+ mounted() {
+    checkColor({
+      selector: ".colors_box", //add any selector
+      optimize_text: true,
+    });
+  },
+};
 
 ```
 
