@@ -24,15 +24,14 @@ function lightOrDark(color) {
 }
 
 function checkColor(options) {
-  if (options && options.checkColorOf) {
-    var colorSelected, bgColor, brightness;
-    colorSelected = options.checkColorOf;
-    brightness = this.lightOrDark(colorSelected);
-    if (brightness === "dark" && options.ifDarkDo) {
-      options.ifDarkDo
-    } else {
-      options.ifLightDo
-    }
+// Created by Amans199 ['https://www.linkedin.com/in/amans199/']
+  if (options && options.selector) {
+  let brightness,
+   selector = document.querySelectorAll(options.selector + '[data-color]');
+  [].forEach.call(selector, function(ele) {
+    brightness = lightOrDark(ele.dataset.color);
+    ele.setAttribute('data-brightness', brightness)
+  });
   }
 }
 

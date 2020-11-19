@@ -39,7 +39,7 @@
 npm install the-simplest-color-checker --save
 ```
 ```sh
-import checkColor from 'the-simplest-color-checker'
+import {checkColor} from 'the-simplest-color-checker'
 ```
 
 <!-- USAGE EXAMPLES -->
@@ -49,13 +49,36 @@ import checkColor from 'the-simplest-color-checker'
 <br />
 Use it as below
 <br />
+
+1- import the checkColor module into your project and add the selector as following : 
+
 ```
-  checkColor({
-      checkColorOf:"#eee",
-      ifDarkDo:alert('this color is dark),
-      ifLightDo:alert('this color is light')
-  });
+
+import {checkColor} from 'the-simplest-color-checker'
+checkColor({
+  selector:".colors_box" //add any selector
+});
+
+
 ```
+2- Add data-color to all elements with the value of the color you wanna test;
+
+`data-color="#000"`
+
+<br/>
+
+the previous line will result with a 
+`data-brightness="dark"`
+
+### Example
+```
+    <span data-color="#000" className="colors_box"></span>
+    <span data-color="#00000" className="colors_box"></span>
+    <span data-color="#000" className="colors_box"></span>
+    <span data-color="#f00" className="colors_box"></span>
+
+```
+
 <br />
 <br />
 See the [open issues](https://github.com/amans199/the-simplest-color-checker/issues) for a list of proposed features (and known issues).
