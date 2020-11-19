@@ -31,6 +31,14 @@ function checkColor(options) {
   [].forEach.call(selector, function(ele) {
     brightness = lightOrDark(ele.dataset.color);
     ele.setAttribute('data-brightness', brightness)
+    if(options.optimize_text_color ===true){
+      
+      if(brightness === 'dark'){
+        ele.style.color = "#fff";
+      }else{
+        ele.style.color = "#000";
+      }
+    }
   });
   }
 }
