@@ -26,7 +26,21 @@ function lightOrDark(color) {
 function checkColor(options) {
 // Created by Amans199 ['https://www.linkedin.com/in/amans199/']
   if (options && options.selector) {
-  let brightness,
+  let brightness,textColorIfDark,textColorIfLight
+if(typeof  options.ifLight !== 'undefined'){
+  if(typeof  options.ifLight.textColor !== 'undefined'){
+    textColorIfLight=options.ifLight.textColor
+  }
+}else{
+  textColorIfLight='#000'
+}
+if( typeof options.ifDark !== 'undefined'){
+  if(typeof  options.ifDark.textColor !== 'undefined'){
+    textColorIfDark=options.ifDark.textColor
+  }
+}else{
+  textColorIfDark='#fff'
+}
    selector = document.querySelectorAll(options.selector + '[data-color]');
   [].forEach.call(selector, function(ele) {
     brightness = lightOrDark(ele.dataset.color);
@@ -34,9 +48,17 @@ function checkColor(options) {
     if(options.optimize_text_color ===true){
       
       if(brightness === 'dark'){
-        ele.style.color = "#fff";
+        ele.style.color = textColorIfDark;
+            let ele_childs = ele.querySelectorAll('*');
+              [].forEach.call(ele_childs, function(ele_child) {
+              ele_child.style.color =  textColorIfDark;
+            })
       }else{
-        ele.style.color = "#000";
+        ele.style.color =textColorIfLight;
+        let ele_childs = ele.querySelectorAll('*');
+              [].forEach.call(ele_childs, function(ele_child) {
+              ele_child.style.color =textColorIfLight;
+        })
       }
     }
   });

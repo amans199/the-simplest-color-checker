@@ -5,11 +5,17 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT Description -->
 <br />
 <p align="center">
 
   <h3 align="center">Check if the color is light or Dark in a second</h3>
+  <h4 align="center">This : </h4>
+    <br />
+    <img  align="center" src="images/dynamic_backgrounds_before_using_color_checker.PNG" alt="dynamic_backgrounds_before_using_color_checker" width="200" >
+    <br />
+    <h4 align="center">will turn into this : </h4>
+    <img  align="center" src="images/dynamic_backgrounds_after_using_color_checker.PNG" alt="dynamic_backgrounds_after_using_color_checker" width="200" >
 
   <p align="center">
     <br />
@@ -55,7 +61,14 @@ Use it as below
 ```
 import {checkColor} from 'the-simplest-color-checker'
 checkColor({
-  selector:".colors_box" //add any selector
+  selector:".colors_box" //add any selector,
+  optimize_text_color: true, //change text color depending on the background
+  ifDark:{
+    textColor:"#f00"
+  },
+  ifLight:{
+    textColor:"#00f"
+  }
 });
 ```
 2- Add data-color to all elements with the value of the color you wanna test;
@@ -96,7 +109,13 @@ class App extends Component {
   componentDidMount(){
     checkColor({
       selector: ".colors_box", //add any selector
-      optimize_text_color: true, //change text color depending on the background
+      optimize_text_color: true, //change text color depending on the background,
+      ifDark:{
+        textColor:"#fff"
+      },
+      ifLight:{
+        textColor:"#000"
+      }
     })
   }
       render() {
@@ -130,6 +149,12 @@ export default {
     checkColor({
       selector: ".colors_box", //add any selector
       optimize_text: true,
+      ifDark:{
+        textColor:"#fff"
+      },
+      ifLight:{
+        textColor:"#000"
+      }
     });
   },
 };
