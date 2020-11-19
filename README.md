@@ -70,17 +70,17 @@ the previous line will result with a
 ### Example
 This : 
 ```
-    <span data-color="#000" className="colors_box"></span>
-    <span data-color="#fff" className="colors_box"></span>
-    <span data-color="#f00" className="colors_box"></span>
+    <span data-color="#000" class="colors_box"></span>
+    <span data-color="#fff" class="colors_box"></span>
+    <span data-color="#f00" class="colors_box"></span>
 
 ```
 
 will result : 
 ```
-    <span data-color="#000" className="colors_box" data-brightness="dark"></span>
-    <span data-color="#fff" className="colors_box" data-brightness="light"></span>
-    <span data-color="#f00" className="colors_box" data-brightness="light"></span>
+    <span data-color="#000" class="colors_box" data-brightness="dark"></span>
+    <span data-color="#fff" class="colors_box" data-brightness="light"></span>
+    <span data-color="#f00" class="colors_box" data-brightness="light"></span>
 
 ```
 
