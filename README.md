@@ -53,13 +53,10 @@ Use it as below
 1- import the checkColor module into your project and add the selector as following : 
 
 ```
-
 import {checkColor} from 'the-simplest-color-checker'
 checkColor({
   selector:".colors_box" //add any selector
 });
-
-
 ```
 2- Add data-color to all elements with the value of the color you wanna test;
 
@@ -71,11 +68,19 @@ the previous line will result with a
 `data-brightness="dark"`
 
 ### Example
+This : 
 ```
     <span data-color="#000" className="colors_box"></span>
-    <span data-color="#00000" className="colors_box"></span>
-    <span data-color="#000" className="colors_box"></span>
+    <span data-color="#fff" className="colors_box"></span>
     <span data-color="#f00" className="colors_box"></span>
+
+```
+
+will result : 
+```
+    <span data-color="#000" className="colors_box" data-brightness="dark"></span>
+    <span data-color="#fff" className="colors_box" data-brightness="light"></span>
+    <span data-color="#f00" className="colors_box" data-brightness="light"></span>
 
 ```
 

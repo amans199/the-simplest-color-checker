@@ -1,6 +1,6 @@
 {
   "name": "the-simplest-color-checker",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "check if color is dark or light and do something",
   "main": "index.js",
   "scripts": {
