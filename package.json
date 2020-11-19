@@ -1,7 +1,7 @@
 {
   "name": "the-simplest-color-checker",
-  "version": "2.0.1",
-  "description": "check if color is dark or light and do something",
+  "version": "2.0.2",
+  "description": "check if a dynamic color is dark or light and optimize the text within it",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "colors",
-    "color-check"
+    "color-check",
+    "text-color-optimizer"
   ],
   "author": "Ahmed Mansour",
   "license": "ISC",

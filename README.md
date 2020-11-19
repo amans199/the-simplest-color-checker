@@ -67,7 +67,7 @@ checkColor({
 the previous line will result with a 
 `data-brightness="dark"`
 
-### Example
+### Examples
 This : 
 ```
     <span data-color="#000" className="colors_box"></span>
@@ -84,7 +84,53 @@ will result :
 
 ```
 
-<br />
+<hr />
+
+#### Using the-simplest-color-checker in React app: 
+
+```
+
+import { Component } from 'react';
+import {checkColor} from 'the-simplest-color-checker'
+class App extends Component {
+  componentDidMount(){
+    checkColor({
+      selector: ".colors_box", //add any selector
+      optimize_text_color: true, //change text color depending on the background
+    })
+  }
+      render() {
+        return (
+          <div className="App">
+              <div className="boxes">
+                <span data-color="#000" className="colors_box">color box</span>
+                  <span data-color="#fff" className="colors_box">color box</span>
+                  <span data-color="#0f0" className="colors_box">color box</span>
+                  <span data-color="#00f" className="colors_box">color box</span>
+                  <span data-color="#f00" className="colors_box">color box</span>
+              </div>
+          </div>
+        );
+    }
+}
+
+export default App;
+
+```
+
+
+<hr />
+
+#### Using the-simplest-color-checker in Vue app: 
+
+```
+
+
+```
+
+<hr />
+
+
 <br />
 See the [open issues](https://github.com/amans199/the-simplest-color-checker/issues) for a list of proposed features (and known issues).
 
