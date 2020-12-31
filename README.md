@@ -9,14 +9,15 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Check if the color is light or Dark in a second</h3>
-  <h4 align="center">This : </h4>
+  <h3 >Check if the color is light or Dark in a second</h3>
+  <h4 >This (text inside the boxes are all the same color because you can't know what is the background of the dynamic box will be) : </h4>
     <br />
-    <img  align="center" src="images/dynamic_backgrounds_before_using_color_checker.PNG" alt="dynamic_backgrounds_before_using_color_checker" width="200" >
+    <img  src="images/dynamic_backgrounds_before_using_color_checker.PNG" alt="dynamic_backgrounds_before_using_color_checker" width="200" >
     <br />
-    <h4 align="center">will turn into this : </h4>
-    <img  align="center" src="images/dynamic_backgrounds_after_using_color_checker.PNG" alt="dynamic_backgrounds_after_using_color_checker" width="200" >
-
+    <h4 >will turn into this : (the color of the text inside the boxes are changing depending on the background of the dynamic boxes )  </h4>
+    <img   src="images/dynamic_backgrounds_after_using_color_checker.PNG" alt="dynamic_backgrounds_after_using_color_checker" width="200" >
+    <br />
+    <a href="https://github.com/amans199/color_checker_example" target="_blank">see example sourcecode</a>
   <p align="center">
     <br />
     <a href="https://github.com/amans199/the-simplest-color-checker"><strong>Explore the docs »</strong></a>
