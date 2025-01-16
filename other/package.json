@@ -1,0 +1,26 @@
+{
+  "name": "the-simplest-color-checker",
+  "version": "3.0.0",
+  "description": "Utility functions to check if a color is dark or light and optimize text contrast accordingly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amans199/the-simplest-color-checker.git"
+  },
+  "keywords": [
+    "colors",
+    "color-check",
+    "contrast",
+    "text-color-optimizer",
+    "light-dark-color"
+  ],
+  "author": "Ahmed Ouda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amans199/the-simplest-color-checker/issues"
+  },
+  "homepage": "https://github.com/amans199/the-simplest-color-checker#readme"
+}
