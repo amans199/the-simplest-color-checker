@@ -1,3 +1,5 @@
+// Old implementation
+// @ts-nocheck
 /**
  * Utility function: Get brightness of a color
  * @param {string} color - Color to be checked as hex, rgb or rgba
@@ -13,7 +15,7 @@ function getBrightness(color) {
     g = color[2];
     b = color[3];
   } else {
-    color = +("0x" + color.slice(1).replace(color.length < 5 && /./g, "$&$&"));
+    color = +('0x' + color.slice(1).replace(color.length < 5 && /./g, '$&$&'));
     r = color >> 16;
     g = (color >> 8) & 255;
     b = color & 255;
@@ -50,21 +52,21 @@ function isDark(color) {
 function applyColorRules(options) {
   if (!options || !options.targetSelector) return;
 
-  const lightTextColor = options.lightTextColor || "#000";
-  const darkTextColor = options.darkTextColor || "#fff";
+  const lightTextColor = options.lightTextColor || '#000';
+  const darkTextColor = options.darkTextColor || '#fff';
   const elements = document.querySelectorAll(
     `${options.targetSelector}[data-color]`
   );
 
-  elements.forEach((element) => {
-    const brightness = isLight(element.dataset.color) ? "light" : "dark";
-    element.setAttribute("data-brightness", brightness);
+  elements.forEach(element => {
+    const brightness = isLight(element.dataset.color) ? 'light' : 'dark';
+    element.setAttribute('data-brightness', brightness);
 
     if (options.adjustTextColor) {
-      const textColor = brightness === "dark" ? darkTextColor : lightTextColor;
+      const textColor = brightness === 'dark' ? darkTextColor : lightTextColor;
       element.style.color = textColor;
 
-      element.querySelectorAll("*").forEach((child) => {
+      element.querySelectorAll('*').forEach(child => {
         child.style.color = textColor;
       });
     }
@@ -86,15 +88,15 @@ function applyColorRules(options) {
  */
 function checkColor(options) {
   console.warn(
-    "`checkColor` is deprecated and will be removed in a future version. Use `applyColorRules` instead."
+    '`checkColor` is deprecated and will be removed in a future version. Use `applyColorRules` instead.'
   );
 
   // Map old options to new options for backward compatibility
   const mappedOptions = {
     targetSelector: options.selector, // `selector` -> `targetSelector`
     adjustTextColor: options.optimize_text_color, // `optimize_text_color` -> `adjustTextColor`
-    lightTextColor: options.ifLight?.textColor || "#000", // `ifLight.textColor` -> `lightTextColor`
-    darkTextColor: options.ifDark?.textColor || "#fff", // `ifDark.textColor` -> `darkTextColor`
+    lightTextColor: options.ifLight?.textColor || '#000', // `ifLight.textColor` -> `lightTextColor`
+    darkTextColor: options.ifDark?.textColor || '#fff', // `ifDark.textColor` -> `darkTextColor`
   };
 
   applyColorRules(mappedOptions);
