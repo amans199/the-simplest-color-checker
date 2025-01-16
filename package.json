@@ -1,6 +1,6 @@
 {
   "name": "the-simplest-color-checker",
-  "version": "4.0.0",
+  "version": "4.0.2",
   "description": "A powerful, dependency-free color manipulation library",
   "main": "./lib/index.js",
   "files": [
