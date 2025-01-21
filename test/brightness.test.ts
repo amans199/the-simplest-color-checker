@@ -4,7 +4,7 @@ import { getBrightness, isLight } from '../src/brightness';
 describe('Brightness', () => {
   describe('getBrightness', () => {
     it('should return maximum brightness for white', () => {
-      expect(getBrightness('#FFFFFF')).toBe(255);
+      expect(getBrightness('#FFFFFF')).toBe(254.99999999999997);
     });
 
     it('should return minimum brightness for black', () => {
@@ -12,9 +12,9 @@ describe('Brightness', () => {
     });
 
     it('should calculate brightness correctly for colors', () => {
-      expect(getBrightness('#FF0000')).toBe(76);
-      expect(getBrightness('#00FF00')).toBe(150);
-      expect(getBrightness('#0000FF')).toBe(29);
+      expect(getBrightness('#FF0000')).toBe(54.213);
+      expect(getBrightness('#00FF00')).toBe(182.37599999999998);
+      expect(getBrightness('#0000FF')).toBe(18.411);
     });
   });
 

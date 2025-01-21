@@ -1,10 +1,51 @@
+import { namedColors, rgbRegex } from "./utils";
+
+
+export const namedColorToRGB = (color: string): { r: number; g: number; b: number } | null => {
+  const lowerColor = color.toLowerCase();
+  return namedColors[lowerColor] || null;
+};
+
+
+export  const rgbStringToRGB = (rgb: string): { r: number; g: number; b: number } | null => {
+  const match = rgb.match(rgbRegex);
+  if (!match) return null;
+
+  const r = parseInt(match[1], 10);
+  const g = parseInt(match[2], 10);
+  const b = parseInt(match[3], 10);
+
+  // Ensure values are within the valid range
+  if (r > 255 || g > 255 || b > 255) return null;
+
+  return { r, g, b };
+};
+
+export const toRGB = (color: string): { r: number; g: number; b: number } => {
+  if (color.startsWith('#')) {
+    return hexToRGB(color);
+  }
+
+  const rgbColor = rgbStringToRGB(color);
+  if (rgbColor) {
+    return rgbColor;
+  }
+
+  const namedColor = namedColors[color.toLowerCase()];
+  if (namedColor) {
+    return namedColor;
+  }
+
+  throw new Error(`Unsupported color format: ${color}`);
+};
+
 export const hexToRGB = (hex: string): { r: number; g: number; b: number } => {
   let color = hex.charAt(0) === '#' ? hex.substring(1) : hex;
 
   if (color.length === 3) {
     color = color
       .split('')
-      .map(char => char + char)
+      .map((char) => char + char)
       .join('');
   }
 
@@ -14,6 +55,19 @@ export const hexToRGB = (hex: string): { r: number; g: number; b: number } => {
 
   return { r, g, b };
 };
+
+
+
+
+export const hexToRgba = (color: string, alpha: number): string => {
+  if (!color) return `rgba(0, 0, 0, 0)`;
+  
+  const {r, g, b} = toRGB(color);
+
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+
 
 export const rgbToHex = (r: number, g: number, b: number): string => {
   const toHex = (n: number): string => {

@@ -1,9 +1,9 @@
-import { hexToRGB } from './color-conversions';
+import {  toRGB } from './color-conversions';
+
 
 export const getBrightness = (color: string): number => {
-  const { r, g, b } = hexToRGB(color);
-  // Using the YIQ formula (same as W3C)
-  return Math.round((r * 299 + g * 587 + b * 114) / 1000);
+    const { r, g, b } = toRGB(color);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 };
 
 export const isLight = (color: string): boolean => {
